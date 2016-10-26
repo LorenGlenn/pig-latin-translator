@@ -1,7 +1,6 @@
 var vowels = ['a', 'e', 'i', 'o', 'u'];
 var vowelys = ['a', 'e', 'i', 'o', 'u', 'y'];
-var vowelLocations = [];
-var firstVowel;
+
 
 var sentenceHandler = function(pigSentence) {
   var pigArray = pigSentence.split(" ");
@@ -53,6 +52,9 @@ var quCheck = function(splitPigSentence){
 }
 
 var consonantCheck = function(splitPigSentence){
+
+  var vowelLocations = [];
+  var firstVowel;
 
   for(var index = 0; index < splitPigSentence.length; index++){
     if (vowelys.indexOf(splitPigSentence[index]) > -1){

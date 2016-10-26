@@ -2,6 +2,9 @@
   display: none;
 }
 
+#pig-sentence, label{
+  font-size: 18px;
+}
 .container {
   text-align: center;
 }
@@ -11,12 +14,15 @@
   background-color: #ddbae4;
 }
 
+body{
+  color: saddlebrown;
+}
+
 img {
   position: relative;
 }
 
-button{
-  position: absolute;
-  right: 520px;
-  top: 365px;
+button {
+  margin-top: 50px;
+  width: 20%;
 }
