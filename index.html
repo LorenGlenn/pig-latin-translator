@@ -8,16 +8,17 @@
     <title>Pigs</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container-fluid">
       <div class="well">
         <h1>Pig Latin Translator</h1>
         <form id="pig-latin">
           <div class="form-group">
             <label for="user-input">Enter your sentence:</label>
-            <input type="text" id="user-input">
+            <input type="text" id="user-input" class="form-control">
           </div>
           <div class="piggy">
-            <img src="http://pngimg.com/upload/pig_PNG2201.png" alt="oinkay" />
+            <img src="http://orig15.deviantart.net/2c14/f/2015/292/f/7/cute_waddles_by_leapingriver-d9dqa7c.png" alt="oinkay" id="before-img"/>
+            <img src="http://img2.wikia.nocookie.net/__cb20130415011643/gravityfalls/images/thumb/e/e6/S1e7_waddles_shock_transparent.png/265px-S1e7_waddles_shock_transparent.png" alt="oinkay two" id="after-img"/>
           </div>
           <button type="submit" id="pig-it" class="btn btn-danger">Pig It!</button>
         </form>

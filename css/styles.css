@@ -5,7 +5,16 @@
 #pig-sentence, label{
   font-size: 18px;
 }
-.container {
+
+#after-img {
+  display: none;
+}
+
+#user-input {
+  text-align: center;
+}
+
+.container-fluid {
   text-align: center;
 }
 
@@ -20,6 +29,7 @@ body{
 
 img {
   position: relative;
+  width: 25%;
 }
 
 button {

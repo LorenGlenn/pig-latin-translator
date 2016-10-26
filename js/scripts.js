@@ -76,7 +76,7 @@ var consonantCheck = function(splitPigSentence){
 var pigTranslator = function(pigWord){
 
   var isAlpha = alphaCheck(pigWord);
-  var splitPigSentence = pigWord.toLowerCase().split("");
+  var splitPigSentence = pigWord.split("");
   var vowelTest = firstVowelCheck(splitPigSentence);
   var quTest = quCheck(splitPigSentence);
   var consonantTest = consonantCheck(splitPigSentence);
@@ -97,10 +97,12 @@ var pigTranslator = function(pigWord){
 $(document).ready(function(){
   $("#pig-latin").submit(function(event){
 
-    var userInput = $("#user-input").val();
+    var userInput = $("#user-input").val().toLowerCase();
     var newSentence = sentenceHandler(userInput);
     $('#pig-sentence').text(newSentence);
     $("#output").show();
+    $("#before-img").hide();
+    $("#after-img").show();
     event.preventDefault();
   });
 });
