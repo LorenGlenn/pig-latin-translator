@@ -6,7 +6,7 @@ var firstVowel;
 var sentenceHandler = function(pigSentence) {
   var pigArray = pigSentence.split(" ");
   tempArray = [];
-  console.log(pigArray);
+
   for (index = 0; index < pigArray.length; index++) {
     var eachWord = pigTranslator(pigArray[index]);
     tempArray.push(eachWord);
@@ -17,14 +17,22 @@ var sentenceHandler = function(pigSentence) {
 
 var pigTranslator = function(pigWord){
   var splitPigSentence = pigWord.toLowerCase().split("");
-  var isNumber = pigWord.match(/\d+/g);
+  var isNumber = pigWord.match(/[^a-z\s]/g);
   if(isNumber){
-    alert('number');
+    alert('please enter only letters');
     return false;
   }
   else if (vowels.indexOf(splitPigSentence[0]) > -1) {
     splitPigSentence.push('ay');
     var newPigSentence = splitPigSentence.join("");
+    return newPigSentence;
+  }
+  else if (splitPigSentence[0] === 'q' && splitPigSentence[1] === 'u'){
+    var quArray = splitPigSentence.splice(0, 2);
+    quArray.push('ay');
+    var quSentence = quArray.join("");
+    splitPigSentence.push(quSentence);
+    newPigSentence = splitPigSentence.join("");
     return newPigSentence;
   }
   for(var index = 0; index < splitPigSentence.length; index++){
