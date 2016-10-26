@@ -1,3 +1,22 @@
 #output {
   display: none;
 }
+
+.container {
+  text-align: center;
+}
+
+.well {
+  margin: 100px;
+  background-color: #ddbae4;
+}
+
+img {
+  position: relative;
+}
+
+button{
+  position: absolute;
+  right: 520px;
+  top: 365px;
+}
