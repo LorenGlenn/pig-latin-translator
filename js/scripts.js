@@ -101,8 +101,8 @@ $(document).ready(function(){
     var newSentence = sentenceHandler(userInput);
     $('#pig-sentence').text(newSentence);
     $("#output").show();
-    $("#before-img").hide();
-    $("#after-img").show();
+    $("#before-img").toggle();
+    $("#after-img").toggle();
     event.preventDefault();
   });
 });
